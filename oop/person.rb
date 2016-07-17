@@ -1,13 +1,24 @@
-# Create a person class with readable first_name and last_name attributes 
+# Create a person class with readable first_name and last_name attributes
 # and a method to calculate its full_name.
+class Person
+  attr_reader :first_name, :last_name
+  def initialize(options)
+    @first_name = options[:first_name]
+    @last_name = options[:last_name]
+  end
 
+  def full_name
+    @full_name = "#{@first_name} #{@last_name}"
+    return @full_name
+  end
+end
 
 
 # Driver code - don't touch anything below this line.
 puts "TESTING the Person class..."
 puts
 
-person = Person.new("Peter", "Jang")
+person = Person.new(first_name: "Peter", last_name: "Jang")
 
 result = person.first_name
 
