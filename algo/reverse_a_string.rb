@@ -1,9 +1,11 @@
-# Complete the method called reverse_a_string that accepts a string as a parameter and 
+# Complete the method called reverse_a_string that accepts a string as a parameter and
 # returns the reverse. The one caveat: Don't use the reverse method that already
 # comes with Ruby!
 
 def reverse_a_string(string)
-
+  original_ary = string.split(//)
+  reversed_ary = original_ary.sort { |x, y| y <=> x }
+  return reversed_ary.join
 end
 
 # Driver code - don't touch anything below this line.
